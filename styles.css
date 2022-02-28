@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #001219;
+	font-family: "Poppins", sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	position: relative;
+}
+
+.title {
+	text-align: center;
+	color: white;
+	font-family: "Pacifico", cursive;
+	font-weight: 200;
+	font-size: 4rem;
+}
+
+.title::first-letter {
+	color: #bb3e03;
+}
+
+.clock {
+	background: #94d2bd;
+	color: #94d2bd;
+	display: flex;
+	font-size: 3rem;
+	border-radius: 0.2em;
+}
+
+.time-card {
+	background: #005f73;
+	margin: 0.6rem;
+	border-radius: 0.6rem;
+	width: 140px;
+	height: 140px;
+	position: relative;
+}
+
+.hour,
+.min,
+.sec {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.period {
+	font-size: 1.4rem;
+	margin-top: -0.3em;
+	margin-left: 1em;
+	transform: translateY(5em);
+	font-weight: 500;
+	color: #005f73;
+}
+
+span {
+	font-size: 1rem;
+	position: absolute;
+	bottom: 0.2rem;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.calendar {
+	background: #ee9b00;
+	width: 100%;
+	color: #ae2012;
+	display: flex;
+	border-radius: 0.5em;
+	position: relative;
+}
+
+.calendar img {
+	max-width: 200px;
+	border-radius: 0.5em 0 0 0.5em;
+}
+
+.calendar .content {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+	color: #011f2a;
+	font-size: 2rem;
+	transform: translate(-6em, -1em);
+}
+
+.calendar .heading {
+	font-size: 3.5rem;
+	font-family: "Pacifico", cursive;
+}
+
+.calendar button {
+	cursor: pointer;
+	padding: 1rem;
+	text-align: center;
+	position: absolute;
+	right: 3rem;
+	align-self: center;
+	background: #011f2a;
+	color: #ee9b00;
+	font-weight: 700;
+	font-family: "Poppins", sans-serif;
+	border: none;
+	border-radius: 0.3rem;
+	transition: all 0.2s ease-in-out;
+}
+
+.calendar button:hover {
+	box-shadow: 2px 2px 15px 2px #023a4e;
+	color: #ffa702;
+}
+
+/* Add the animation: property to whichever element you want to animate */
+.animate {
+	animation: rotate 3s ease-in-out;
+}
+
+@keyframes rotate {
+	100% {
+		transform: rotate(-360deg);
+	}
+}
